@@ -10,19 +10,19 @@ Imagine you're managing a **Gaming League** 🎮🏆. You have a table for **Pla
 To understand how each type of join works, let’s take a look at some images! Visualizing joins can really help clarify how they behave:
 
 1. **INNER JOIN**  
-   - An `INNER JOIN` returns only the rows where there’s a match in both tables.
+   - Only matches in both tables are returned. Think of it as *the players who actually played in a game*.
       <img src="https://blog.codinghorror.com/content/images/uploads/2007/10/6a0120a85dcdae970b012877702708970c-pi.png" alt="INNER JOIN" width="250" height="150" style="display:block; margin-left: 0;"/>
 
 2. **LEFT JOIN**  
-   - A `LEFT JOIN` returns all rows from the left table, and the matched rows from the right table. If there’s no match, it returns `NULL` for the right table.
+   - All players are shown, even if they didn’t join any game (poor solo queue players 😢). 
       <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240605161731/Left_Join.png" alt="LEFT JOIN" width="250" height="150" style="display:block; margin-left: 0;"/>
 
 3. **RIGHT JOIN**  
-   - A `RIGHT JOIN` returns all rows from the right table, and the matched rows from the left table. If there’s no match, it returns `NULL` for the left table.
+   - All games are shown, even if no players signed up for them. It’s like when a tournament starts but nobody showed up!
       <img src="https://media.geeksforgeeks.org/wp-content/uploads/20220515095048/join.jpg" alt="RIGHT JOIN" width="250" height="150" style="display:block; margin-left: 0;"/>
 
 4. **FULL OUTER JOIN**  
-   - A `FULL OUTER JOIN` returns all rows from both tables, with `NULL` where there’s no match.
+   - Everyone and everything is included—games with players, games without players, and players without games. The ultimate inclusive league! 🥳
       <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240605161926/Full_Join.png" alt="FULL OUTER JOIN" width="250" height="150" style="display:block; margin-left: 0;"/>
 
 

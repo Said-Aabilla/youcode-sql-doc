@@ -5,3 +5,6 @@
 
 ### Indexing for Performance
 
+### Functions and Procedures 
+
+### Triggers
