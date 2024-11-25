@@ -2,9 +2,9 @@
 
 ## Table of Contents
 1. [Introduction to SQL](#introduction-to-sql)
-2. [SQL Basics](#sql-basics)
-3. [Intermediate SQL](#intermediate-sql)
-4. [Advanced Topics](#advanced-topics)
+2. [SQL Basics](sql-basics.md)
+3. [Intermediate SQL](intermediate-sql.md)
+4. [Advanced Topics](advanced-topics.md)
 
 ---
 

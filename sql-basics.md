@@ -170,3 +170,100 @@ WHERE name = 'Charlie';
 And just like that, Charlie is out! 👋 May god help him, opening your own business can be frustrating sometimes!
 
 ---
+### Grouping and Aggregating Data – Let’s Crunch Some Numbers! 📊  
+SQL is great at helping you summarize data, and you’ll often need to use `GROUP BY` with aggregation functions. It’s like trying to figure out how much tip your team made after a long day of service.  
+But first let us clean the employees table and insert new data:
+
+```sql
+DELETE FROM employees
+WHERE 1 = 1;  -- A nice way to delete all records from the employees table.
+
+-- insert new records
+INSERT INTO employees (id, name, department, salary)
+VALUES
+    (1, 'Alice', 'Barista', 30000),
+    (2, 'Bob', 'Manager', 50000),
+    (3, 'Charlie', 'Chef', 40000);
+    (4, 'Amine', 'Sous-Chef', 38000);
+
+```
+
+
+#### **COUNT**  
+Let’s count how many employees we have in the café (spoiler: more than enough 🍽️).  
+
+```sql
+SELECT COUNT(*) AS number_of_employees
+FROM employees;
+```  
+
+**Result:**
+
+| number_of_employees |
+|---------------------|
+| 5                   |
+
+#### **SUM**  
+Let’s calculate the total salary your café is paying. Hopefully, it’s not too shocking! 💰  
+
+```sql
+SELECT SUM(salary) AS total_salary
+FROM employees;
+```  
+
+**Result:**
+
+| total_salary |
+|--------------|
+| 158000       |
+
+#### **AVG**  
+Let’s find out the average salary in your café. Spoiler alert: Alice might be earning a lot less than Bob! 😅  
+
+```sql
+SELECT AVG(salary) AS average_salary
+FROM employees;
+```  
+
+**Result:**
+
+| average_salary |
+|----------------|
+| 39500          |
+
+#### **MAX and MIN**  
+Let’s figure out who’s earning the most (Bob, duh 😏), and who’s earning the least (poor Alice 😢).  
+
+```sql
+SELECT MAX(salary) AS max_salary, MIN(salary) AS min_salary
+FROM employees;
+```  
+
+**Result:**
+
+| max_salary | min_salary |
+|------------|------------|
+| 50000      | 30000      |
+
+---
+
+### Sorting Data – Time to Organize! 📋  
+Now that you’ve got all the data, let’s organize it properly, so you can actually make sense of it. 🧠
+
+#### **ORDER BY**  
+Let’s sort employees by their salary, from the highest to the lowest. Who’s the boss in this café? 💼  
+
+```sql
+SELECT name, salary
+FROM employees
+ORDER BY salary DESC;
+```  
+
+**Result:**
+
+| name    | salary |
+|---------|--------|
+| Bob     | 50000  |
+| Charlie | 40000  |
+| Aminenn | 38000  |
+| Alice   | 30000  |
